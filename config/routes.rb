@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   
+  post "order_complete" => "carts#order_complete"
+  
   get 'branding' => 'storefront#items_by_brand'
   
   get 'categorical' => 'storefront#items_by_category'
